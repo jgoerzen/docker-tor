@@ -13,6 +13,6 @@ RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
 
 # Had issues with hidden services.
 RUN sed -i -e 's/AppArmorProfile=.*//g' -e 's/ProtectSystem=.*//g' /lib/systemd/system/tor*.service && \
-    rm -v /etc/apparmod.d/system_tor
+    rm -v /etc/apparmor.d/system_tor
 CMD ["/usr/local/bin/boot-debian-base"]
 
