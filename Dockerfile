@@ -11,6 +11,7 @@ RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     /usr/local/bin/docker-wipelogs && \
     mv /usr/sbin/policy-rc.d /usr/sbin/policy-rc.d.disabled
 
-VOLUME ["/var/spool/uucp"]
+RUN sed -i 's/AppArmorProfile=.*//g' /lib/systemd/system/tor*.service && \
+    rm -v /etc/apparmod.d/system_tor
 CMD ["/usr/local/bin/boot-debian-base"]
 
