@@ -11,7 +11,8 @@ RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     /usr/local/bin/docker-wipelogs && \
     mv /usr/sbin/policy-rc.d /usr/sbin/policy-rc.d.disabled
 
-RUN sed -i 's/AppArmorProfile=.*//g' /lib/systemd/system/tor*.service && \
+# Had issues with hidden services.
+RUN sed -i -e 's/AppArmorProfile=.*//g' -e 's/ProtectSystem=.*//g' /lib/systemd/system/tor*.service && \
     rm -v /etc/apparmod.d/system_tor
 CMD ["/usr/local/bin/boot-debian-base"]
 
