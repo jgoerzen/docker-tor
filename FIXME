@@ -1,0 +1,3 @@
+The systemd fixes weren't permanent.  Maybe drop something into preinit, or use
+a diversion?
+
