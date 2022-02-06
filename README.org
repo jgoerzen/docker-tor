@@ -1,5 +1,7 @@
 #+TITLE: Tor for Docker
 
+* NOTE: This repo has moved from Github.  See [[https://salsa.debian.org/jgoerzen/docker-tor][its new home on Salsa]].
+
 This is a [[https://www.torproject.org/][Tor]] interface for Docker.
 
-It is based on [[https://github.com/jgoerzen/docker-debian-base][debian-base-security]].  See that page for more details.
+It is based on [[https://salsa.debian.org/jgoerzen/docker-debian-base][debian-base-security]].  See that page for more details.
