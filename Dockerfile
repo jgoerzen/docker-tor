@@ -1,3 +1,4 @@
+#### MAKE SURE TO UPDATE CI WHEN CHANGING FROM BULLSEYE!
 FROM jgoerzen/debian-base-security:bullseye
 MAINTAINER John Goerzen <jgoerzen@complete.org>
 RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \

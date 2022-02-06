@@ -1,0 +1,16 @@
+docker-build-master:
+  # Official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - apk add curl
+    - docker build -t jgoerzen/tor .
+    - docker tag jgoerzen/tor jgoerzen/tor:bullseye
+    - docker push jgoerzen/tor
+    - docker push jgoerzen/tor:bullseye
+  only:
+    - master
