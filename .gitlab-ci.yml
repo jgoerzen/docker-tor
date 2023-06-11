@@ -10,8 +10,8 @@ docker-build-master:
     - umask 0022
     - chmod -R og-w .
     - docker build -t jgoerzen/tor .
-    - docker tag jgoerzen/tor jgoerzen/tor:bullseye
+    - docker tag jgoerzen/tor jgoerzen/tor:bookworm
     - docker push jgoerzen/tor
-    - docker push jgoerzen/tor:bullseye
+    - docker push jgoerzen/tor:bookworm
   only:
     - master
