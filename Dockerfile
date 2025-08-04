@@ -1,5 +1,5 @@
-#### MAKE SURE TO UPDATE CI WHEN CHANGING FROM BOOKWORM!
-FROM jgoerzen/debian-base-security:bookworm
+#### MAKE SURE TO UPDATE CI WHEN CHANGING FROM TRIXIE!
+FROM jgoerzen/debian-base-security:trixie
 MAINTAINER John Goerzen <jgoerzen@complete.org>
 RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     apt-get update && \
